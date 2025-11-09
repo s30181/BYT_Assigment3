@@ -11,7 +11,7 @@ public class Calculator(double a, double b, string operation)
             "*" => a * b,
             "/" => b switch
             {
-                0 => throw new ArgumentException("Cannot divide by zero"),
+                0 => throw new DivideByZeroException(),
                 _ => a / b
             },
             _ => throw new ArgumentException("Unknown operation")

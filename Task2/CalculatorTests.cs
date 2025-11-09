@@ -29,7 +29,7 @@ public class CalculatorTests
     public void DivisionByZeroTest()
     {
         var calculator = new Calculator(15, 0, "/");
-        Assert.Throws<ArgumentException>(() => calculator.GetResult());
+        Assert.Throws<DivideByZeroException>(() => calculator.GetResult());
     }
 
     [Test]
